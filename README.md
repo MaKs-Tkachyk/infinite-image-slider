@@ -19,37 +19,21 @@ npm install infinite-image-slider
 yarn add infinite-image-slider
 ```
 
-## 👉 [Demo](https://codesandbox.io/p/github/MaKs-Tkachyk/infinite-image-slider/example?file=%2FREADME.md) 👈
+## 👉 [Demo with default settings](https://codesandbox.io/p/github/MaKs-Tkachyk/infinite-image-slider/example?file=%2FREADME.md) 👈
 ```js
-import React from 'react';
-import { Slider } from '../Slider';
+import Slider from 'infinite-image-slider';
 import pictures from './constants';
-import { ArrowLeft, ArrowRight } from './arrows';
 import { SliderWrapper, Image } from './styles/App.styles';
 
-const configSettings = [
-  { maxWidth: 1400, slidesNumber: 2, spaceBetween: 4 },
-  { maxWidth: 900, slidesNumber: 1, spaceBetween: 2 },
-];
-
-const App = () => {
-  return (
-    <SliderWrapper>
-      <Slider
-        prevButton={<ArrowLeft />}
-        nextButton={<ArrowRight />}
-        showDots
-        dotColor="black"
-        activeDotColor="blue"
-        config={configSettings}
-      >
-        {pictures.map((picture) => (
-          <Image key={picture.id} src={picture.src} alt={picture.alt} />
-        ))}
-      </Slider>
-    </SliderWrapper>
-  );
-};
+const App = () => (
+  <SliderWrapper>
+    <Slider showDots>
+      {pictures.map((picture) => (
+        <Image key={picture.id} src={picture.src} alt={picture.alt} />
+      ))}
+    </Slider>
+  </SliderWrapper>
+);
 ```
 
 ## **Props**
