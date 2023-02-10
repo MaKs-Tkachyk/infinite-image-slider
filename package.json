@@ -1,52 +1,21 @@
 {
-  "name": "infinite-image-slider",
-  "version": "1.0.2",
-  "license": "MIT",
-  "author": "Maksym Tkachuk",
-  "main": "./dist/esm/index.js",
-  "types": "./dist/esm/index.d.ts",
-  "peerDependencies": {
-    "react": ">=16"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MaKs-Tkachyk/image_carousel.git"
-  },
-  "files": [
-    "dist",
-    "LICENSE",
-    "README.md"
-  ],
-  "keywords": [
-    "react",
-    "typescript",
-    "infinite-carousel",
-    "image-carousel"
-  ],
-  "bugs": {
-    "url": "https://github.com/MaKs-Tkachyk/image_carousel/issues"
-  },
-  "homepage": "https://github.com/MaKs-Tkachyk/image_carousel#readme",
-  "eslintConfig": {
-    "extends": [
-      "wesbos/typescript"
-    ]
+  "name": "custom-demo",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "infinite-image-slider": "^1.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.57.1",
+    "styled-components": "^5.3.6",
+    "uniqid": "^5.4.0",
+    "vite-plugin-svgr": "^2.4.0"
   },
   "scripts": {
     "start": "vite",
-    "build": "tsc",
-    "test": "vitest",
+    "build": "tsc && vite build",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "prepare": "rm -rf dist && npm run build"
-  },
-  "dependencies": {
-    "react": ">=16",
-    "react-dom": "^18.2.0",
-    "styled-components": "^5.3.6",
-    "tslib": "^2.5.0",
-    "uuid": "^9.0.0",
-    "vitest": "^0.28.4"
+    "lint:fix": "eslint . --fix"
   },
   "browserslist": {
     "production": [
@@ -68,10 +37,10 @@
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
     "@types/styled-components": "^5.1.26",
-    "@types/uuid": "^9.0.0",
+    "@types/uniqid": "^5.3.2",
     "@typescript-eslint/eslint-plugin": "^5.47.1",
     "@typescript-eslint/parser": "^5.47.1",
-    "@vitejs/plugin-react-refresh": "^1.3.6",
+    "@vitejs/plugin-react": "^3.1.0",
     "eslint": "^8.31.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
